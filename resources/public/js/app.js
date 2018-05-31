@@ -1,0 +1,18 @@
+goog.addDependency("base.js", ['goog'], []);
+goog.addDependency("../cljs/core.js", ['cljs.core'], ['goog.string', 'goog.object', 'goog.string.StringBuffer', 'goog.array']);
+goog.addDependency("../reagent/interop.js", ['reagent.interop'], ['cljs.core']);
+goog.addDependency("../reagent/debug.js", ['reagent.debug'], ['cljs.core']);
+goog.addDependency("../clojure/string.js", ['clojure.string'], ['goog.string', 'cljs.core', 'goog.string.StringBuffer']);
+goog.addDependency("../reagent/impl/util.js", ['reagent.impl.util'], ['reagent.interop', 'cljs.core', 'reagent.debug', 'clojure.string']);
+goog.addDependency("../reagent/ratom.js", ['reagent.ratom'], ['reagent.impl.util', 'cljs.core']);
+goog.addDependency("../react.inc.js", ['cljsjs.react'], []);
+goog.addDependency("../reagent/impl/batching.js", ['reagent.impl.batching'], ['reagent.impl.util', 'reagent.interop', 'reagent.ratom', 'cljs.core', 'reagent.debug', 'clojure.string']);
+goog.addDependency("../reagent/impl/component.js", ['reagent.impl.component'], ['reagent.impl.util', 'reagent.interop', 'reagent.ratom', 'cljs.core', 'reagent.impl.batching', 'reagent.debug']);
+goog.addDependency("../reagent/impl/template.js", ['reagent.impl.template'], ['reagent.impl.util', 'reagent.interop', 'reagent.ratom', 'cljs.core', 'reagent.impl.batching', 'reagent.impl.component', 'reagent.debug', 'clojure.string']);
+goog.addDependency("../reagent/core.js", ['reagent.core'], ['reagent.impl.util', 'reagent.interop', 'reagent.ratom', 'cljs.core', 'cljsjs.react', 'reagent.impl.template', 'reagent.impl.batching', 'reagent.impl.component', 'reagent.debug']);
+goog.addDependency("../reagent_forms/datepicker.js", ['reagent_forms.datepicker'], ['reagent.core', 'cljs.core', 'clojure.string']);
+goog.addDependency("../clojure/walk.js", ['clojure.walk'], ['cljs.core']);
+goog.addDependency("../reagent_forms/core.js", ['reagent_forms.core'], ['goog.string', 'reagent.core', 'cljs.core', 'reagent_forms.datepicker', 'goog.string.format', 'clojure.string', 'clojure.walk']);
+goog.addDependency("../hiccups/runtime.js", ['hiccups.runtime'], ['cljs.core', 'clojure.string']);
+goog.addDependency("../json_html/core.js", ['json_html.core'], ['hiccups.runtime', 'cljs.core', 'clojure.string']);
+goog.addDependency("../forms_example/core.js", ['forms_example.core'], ['reagent.core', 'cljs.core', 'reagent_forms.core', 'json_html.core']);
